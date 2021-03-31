@@ -1,7 +1,6 @@
 package test;
 
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class LatteIsHorse {
 
@@ -46,7 +45,7 @@ public class LatteIsHorse {
 
         }
 
-        System.out.println("목표 판매량 달성, 퇴근!!");
+        System.out.println("목표 주문량 달성, 퇴근!!");
         bo.cal();
 
     }
