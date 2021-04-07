@@ -5,16 +5,15 @@ import java.util.Map;
 
 public abstract class Base {
 
+    protected int sum;
+    public int value = 0;
 
-    protected int sum ;
-    public int value =0;
-    private Map<String, Integer> menuItem = new HashMap<>() {{
+    private final Map<String, Integer> menuItem = new HashMap<>() {{
         put("Americano", 1000);
         put("Icetea", 1000);
         put("Latte", 1500);
         put("OrangeJuice", 2000);
         put("HoneyBread", 4500);
-
     }};
 
 

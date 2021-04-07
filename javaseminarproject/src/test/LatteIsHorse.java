@@ -25,7 +25,7 @@ public class LatteIsHorse {
             if (total >= 3) {
                 pt.clean();
                 System.out.println("\n");
-                total=0;
+                total = 0;
 
             }
 
@@ -66,10 +66,10 @@ public class LatteIsHorse {
         }
     }
 
-
     private static int getRandomNumber() {
         Random random = new Random();
         return random.nextInt(2);
     }
+
 }
 
