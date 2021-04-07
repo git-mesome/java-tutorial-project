@@ -3,16 +3,13 @@ package test;
 public class PartTime extends Base{
 
 
-    public void provi(String menu,int num){
+    public void provide(String menu, int num){
         System.out.println("주문하신"+menu+" "+num+"잔 나왔습니다. 맛있게 드세용");
-        for(int i=0;i<3;i++){
-            arr[i]=num;
-        }
+        value++;
     };
     public void clean(){
         System.out.println("청소중입니다. 잠시만 기다려주세요");
-
-        Base.arr = new int[3];
-        System.gc();
+        value=0;
+         //정수로 받아서 증감으로 늘리고 최대치되면 청소중
     };
 }

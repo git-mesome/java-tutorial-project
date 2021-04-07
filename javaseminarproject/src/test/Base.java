@@ -5,10 +5,10 @@ import java.util.Map;
 
 public abstract class Base {
 
-    protected static int[] arr;
-    protected static int sum;
-    private Map<String, Integer> menuItem = new HashMap<>()
-    {{
+
+    protected int sum ;
+    public int value =0;
+    private Map<String, Integer> menuItem = new HashMap<>() {{
         put("Americano", 1000);
         put("Icetea", 1000);
         put("Latte", 1500);
@@ -17,21 +17,17 @@ public abstract class Base {
 
     }};
 
-    static {
-        arr = new int[3];
-        sum = 0;
-    }
 
-    public boolean order(String menu,int num) {
-        if(menuItem.containsKey(menu)){
-            sum+=(num*menuItem.get(menu));
+    public boolean order(String menu, int num) {
+        if (menuItem.containsKey(menu)) {
+            sum += (num * menuItem.get(menu));
             return true;
-        }else{
+        } else {
             return false;
         }
     }
 
-    protected abstract void provi(String menu, int num);
+    protected abstract void provide(String menu, int num);  //풀네임으로
 
 }
 /*  **해시맵 사용전 코드
@@ -48,3 +44,4 @@ if (menu.equals("Americano")) {sum+=(1000*num); return true; }
         "Latte",2000
      );
  */
+
