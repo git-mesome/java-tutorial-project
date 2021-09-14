@@ -5,28 +5,28 @@ import java.util.Map;
 
 public abstract class Base {
 
-    protected int sum;
-    public int value = 0;
+  protected int sum;
+  public int value = 0;
 
-    private final Map<String, Integer> menuItem = new HashMap<>() {{
-        put("Americano", 1000);
-        put("Icetea", 1000);
-        put("Latte", 1500);
-        put("OrangeJuice", 2000);
-        put("HoneyBread", 4500);
-    }};
+  private final Map<String, Integer> menuItem = new HashMap<>() {{
+    put("Americano", 1000);
+    put("Icetea", 1000);
+    put("Latte", 1500);
+    put("OrangeJuice", 2000);
+    put("HoneyBread", 4500);
+  }};
 
 
-    public boolean order(String menu, int num) {
-        if (menuItem.containsKey(menu)) {
-            sum += (num * menuItem.get(menu));
-            return true;
-        } else {
-            return false;
-        }
+  public boolean order(String menu, int num) {
+    if (menuItem.containsKey(menu)) {
+      sum += (num * menuItem.get(menu));
+      return true;
+    } else {
+      return false;
     }
+  }
 
-    protected abstract void provide(String menu, int num);  //풀네임으로
+  protected abstract void provide(String menu, int num);  //풀네임으로
 
 }
 /*  **해시맵 사용전 코드
